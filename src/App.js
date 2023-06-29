@@ -16,7 +16,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
-import { ThemeProvider, createTheme } from "@material-ui/core/styles";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import NewGoalForm from "./components/NewGoalForm";
 import GoalList from "./components/GoalList";
@@ -87,7 +87,7 @@ function useCustomTheme(darkState) {
 
   return React.useMemo(
     () =>
-      createTheme({
+      createMuiTheme({
         palette: {
           common: {
             blue: `${arcPink}`,
