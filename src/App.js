@@ -159,7 +159,7 @@ function App(props) {
     },
     {
       _id: uuidv4(),
-      name: "Win hackathon",
+      name: "make task planner project",
       description: "Make best task planner app ever",
       timeAdded: new Date(),
       duration: 2000,
@@ -199,7 +199,7 @@ function App(props) {
                   {darkState ? <Brightness7Icon /> : <Brightness4Icon />}
                 </IconButton>
                 <Link
-                  href=""
+                  href="https://github.com/DhirajGilda/Get-It-Done"
                   target="_blank"
                   rel="noopener noreferrer"
                   color="inherit"
