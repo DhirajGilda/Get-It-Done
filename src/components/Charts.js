@@ -1,6 +1,6 @@
 import { Bar } from "react-chartjs-2";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@material-ui/core";
+import Button from '@mui/material/Button'
 import React, { useState } from "react";
 import Chart from 'chart.js/auto';
 

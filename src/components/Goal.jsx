@@ -4,28 +4,29 @@ import humanizeDuration from "humanize-duration";
 import useInputState from "../hooks/useInputState";
 import HashTagSelector from "./HashTagSelector";
 
-import PlayArrowIcon from "@material-ui/icons/PlayArrow";
-import PauseIcon from "@material-ui/icons/Pause";
-import Typography from "@material-ui/core/Typography";
-import Paper from "@material-ui/core/Paper";
-import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { useTheme } from "@material-ui/core/styles";
-import { makeStyles } from "@material-ui/core/styles";
-import { withStyles } from "@material-ui/core/styles";
-import IconButton from "@material-ui/core/IconButton";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
-import DeleteIcon from "@material-ui/icons/Delete";
-import EditIcon from "@material-ui/icons/Edit";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import TextField from "@material-ui/core/TextField";
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import PauseIcon from '@mui/icons-material/Pause';
+import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button'
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import { makeStyles } from '@mui/styles';
+import { withStyles } from '@mui/styles'
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import MenuItem from "@mui/material/MenuItem";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import TextField from "@mui/material/TextField";
+import { spacing } from '@mui/system';
 
 import {
   red,
@@ -38,7 +39,7 @@ import {
   yellow,
   grey,
   deepOrange,
-} from "@material-ui/core/colors";
+} from "@mui/material/colors";
 
 const colors = {
   red,
@@ -56,22 +57,22 @@ const colors = {
 const EditGoal=({ goal, setGoals, globalHashTags, setEditing })=> {
   const useStyles = makeStyles((theme) => ({
     paper: {
-      marginBottom: theme.spacing(3),
+      marginBottom:theme.spacing(3),
     },
     root: {
       display: "flex",
       flexWrap: "wrap",
-      paddingLeft: theme.spacing(3),
-      paddingRight: theme.spacing(3),
+      paddingLeft:theme.spacing(3),
+      paddingRight:theme.spacing(3),
     },
     textField: {
-      marginLeft: theme.spacing(1),
-      marginRight: theme.spacing(1),
+      marginLeft:spacing(1),
+      marginRight:spacing(1),
       width: "25ch",
     },
     fab: {
-      marginRight: theme.spacing(2),
-      marginBottom: theme.spacing(2),
+      marginRight:spacing(2),
+      marginBottom:spacing(2),
     },
     fabContainer: {
       display: "flex",
@@ -80,10 +81,10 @@ const EditGoal=({ goal, setGoals, globalHashTags, setEditing })=> {
     buttons: {
       display: "flex",
       justifyContent: "flex-end",
-      paddingBottom: theme.spacing(2),
+      paddingBottom:spacing(2),
     },
     btn: {
-      marginRight: theme.spacing(2),
+      marginRight:spacing(2),
     },
   }));
   const classes = useStyles();

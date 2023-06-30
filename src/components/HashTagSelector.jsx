@@ -1,11 +1,13 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import { red, pink, green, purple, blue, teal, lime, yellow, grey, deepOrange } from "@material-ui/core/colors";
+import Button from "@mui/material/Button";
+import { makeStyles } from '@mui/styles';
+import { useTheme } from "@mui/material/styles";
+import { spacing } from '@mui/system';
+import { red, pink, green, purple, blue, teal, lime, yellow, grey, deepOrange } from "@mui/material/colors";
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    margin: theme.spacing(1),
+    margin:theme.spacing.unit,
   },
 }));
 
@@ -70,7 +72,7 @@ const HashTagSelector = ({ hashTags, setHashTags, globalHashTags }) => {
             size="small"
             key={globalHashTag._id}
             onClick={() => handleToggleHashTag(globalHashTag)}
-            variant={selected ? "outlined" : "contained"}
+            variant={selected ? "outlined" : ""}
           >
             {globalHashTag.tag}
           </ColorButton>

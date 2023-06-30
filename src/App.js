@@ -2,31 +2,32 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import useLocalStorageState from "./hooks/useLocalStorageState";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import Button from "@material-ui/core/Button";
-import Brightness4Icon from "@material-ui/icons/Brightness4";
-import Brightness7Icon from "@material-ui/icons/Brightness7";
-import IconButton from "@material-ui/core/IconButton";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import Link from "@material-ui/core/Link";
+import Button from '@mui/material/Button'
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import IconButton from '@mui/material/IconButton';
+import { spacing } from '@mui/system';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import Link from '@mui/material/Link';
 import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import Box from "@material-ui/core/Box";
-import Container from "@material-ui/core/Container";
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { makeStyles } from "@material-ui/core/styles";
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import CssBaseline from '@mui/material/CssBaseline';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import NewGoalForm from "./components/NewGoalForm";
 import GoalList from "./components/GoalList";
 import Chart from "./components/Charts";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingLeft: theme.spacing(0),
-    paddingRight: theme.spacing(0),
-    paddingTop: theme.spacing(2),
+    paddingLeft:spacing(0),
+    paddingRight:spacing(0),
+    paddingTop:spacing(2),
   },
   searchFilterDiv: {
     display: "flex",
@@ -38,9 +39,9 @@ const useStyles = makeStyles((theme) => ({
   searchBarRoot: {
     display: "flex",
     justifyContent: "space-between",
-    padding: theme.spacing(1),
-    paddingLeft: theme.spacing(3),
-    paddingRight: theme.spacing(3),
+    padding:spacing(1),
+    paddingLeft:spacing(3),
+    paddingRight:spacing(3),
     width: "95%",
   },
   searchIconContainer: {
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   checkBoxContainer: {
-    padding: theme.spacing(2),
+    padding:spacing(2),
   },
   navItemsRight: {
     margin: "auto",
@@ -87,7 +88,7 @@ function useCustomTheme(darkState) {
 
   return React.useMemo(
     () =>
-      createMuiTheme({
+      createTheme({
         palette: {
           common: {
             blue: `${arcPink}`,

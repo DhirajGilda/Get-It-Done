@@ -2,27 +2,28 @@ import React, { useState, useEffect } from "react";
 import Goal from "./Goal";
 import useInputState from "../hooks/useInputState";
 
-import SortIcon from "@material-ui/icons/Sort";
-import MenuList from "@material-ui/core/MenuList";
-import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
-import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
-import IconButton from "@material-ui/core/IconButton";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import InputBase from "@material-ui/core/InputBase";
-import SearchIcon from "@material-ui/icons/Search";
+import SortIcon from "@mui/icons-material/Sort";
+import MenuList from "@mui/material/MenuList";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import IconButton from '@mui/material/IconButton';
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import Typography from "@mui/material/Typography";
+import { makeStyles } from '@mui/styles';
+import Paper from "@mui/material/Paper";
+import InputBase from "@mui/material/InputBase";
+import SearchIcon from "@mui/icons-material/Search";
+import { spacing } from '@mui/system';
 
 import SelectTagFilters from "./SelectTagFilters";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingLeft: theme.spacing(0),
-    paddingRight: theme.spacing(0),
-    paddingTop: theme.spacing(2),
+    paddingLeft:spacing(0),
+    paddingRight:spacing(0),
+    paddingTop:spacing(2),
   },
   searchFilterDiv: {
     display: "flex",
@@ -34,9 +35,9 @@ const useStyles = makeStyles((theme) => ({
   searchBarRoot: {
     display: "flex",
     justifyContent: "space-between",
-    padding: theme.spacing(1),
-    paddingLeft: theme.spacing(3),
-    paddingRight: theme.spacing(3),
+    padding:spacing(1),
+    paddingLeft:spacing(3),
+    paddingRight:spacing(3),
     width: "95%",
   },
   searchIconContainer: {
@@ -44,10 +45,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   checkBoxContainer: {
-    padding: theme.spacing(2),
+    padding:spacing(2),
   },
   resetButton: {
-    marginTop: theme.spacing(2),
+    marginTop:spacing(2),
   },
 }));
 

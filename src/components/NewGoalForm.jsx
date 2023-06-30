@@ -3,29 +3,29 @@ import { v4 as uuidv4 } from "uuid";
 import useInputState from "../hooks/useInputState";
 import HashTagSelector from "./HashTagSelector";
 
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
-
-import Paper from "@material-ui/core/Paper";
+import Typography from "@mui/material/Typography";
+import { makeStyles } from '@mui/styles';
+import TextField from "@mui/material/TextField";
+import Fab from "@mui/material/Fab";
+import AddIcon from "@mui/icons-material/Add";
+import { spacing } from '@mui/system';
+import Paper from '@mui/material/Paper';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
-    paddingLeft: theme.spacing(3),
-    paddingRight: theme.spacing(3),
+    paddingLeft:spacing(3),
+    paddingRight:spacing(3),
   },
   textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
+    marginLeft:spacing(1),
+    marginRight:spacing(1),
     width: "25ch",
   },
   fab: {
-    marginRight: theme.spacing(2),
-    marginBottom: theme.spacing(2),
+    marginRight:spacing(2),
+    marginBottom:spacing(2),
   },
   fabContainer: {
     display: "flex",
