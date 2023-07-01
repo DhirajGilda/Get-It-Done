@@ -427,7 +427,7 @@ const Goal=({ goal, setGoals, globalHashTags })=> {
           <DialogContentText>{goal.description}</DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleClose} color="default">
+          <Button autoFocus onClick={handleClose} color="inherit">
             No
           </Button>
           <Button
