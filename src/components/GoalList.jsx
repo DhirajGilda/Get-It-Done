@@ -15,15 +15,15 @@ import { makeStyles } from '@mui/styles';
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
-import { spacing } from '@mui/system';
+
 
 import SelectTagFilters from "./SelectTagFilters";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingLeft:spacing(0),
-    paddingRight:spacing(0),
-    paddingTop:spacing(2),
+    paddingLeft: theme.spacing(0),
+    paddingRight: theme.spacing(0),
+    paddingTop: theme.spacing(2),
   },
   searchFilterDiv: {
     display: "flex",
@@ -35,9 +35,9 @@ const useStyles = makeStyles((theme) => ({
   searchBarRoot: {
     display: "flex",
     justifyContent: "space-between",
-    padding:spacing(1),
-    paddingLeft:spacing(3),
-    paddingRight:spacing(3),
+    padding: theme.spacing(1),
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3),
     width: "95%",
   },
   searchIconContainer: {
@@ -45,10 +45,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   checkBoxContainer: {
-    padding:spacing(2),
-  },
-  resetButton: {
-    marginTop:spacing(2),
+    padding: theme.spacing(2),
   },
 }));
 

@@ -26,7 +26,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import TextField from "@mui/material/TextField";
-import { spacing } from '@mui/system';
+
 
 import {
   red,
@@ -57,22 +57,22 @@ const colors = {
 const EditGoal=({ goal, setGoals, globalHashTags, setEditing })=> {
   const useStyles = makeStyles((theme) => ({
     paper: {
-      marginBottom:theme.spacing(3),
+      marginBottom: theme.spacing(3),
     },
     root: {
       display: "flex",
       flexWrap: "wrap",
-      paddingLeft:theme.spacing(3),
-      paddingRight:theme.spacing(3),
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3),
     },
     textField: {
-      marginLeft:spacing(1),
-      marginRight:spacing(1),
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(1),
       width: "25ch",
     },
     fab: {
-      marginRight:spacing(2),
-      marginBottom:spacing(2),
+      marginRight: theme.spacing(2),
+      marginBottom: theme.spacing(2),
     },
     fabContainer: {
       display: "flex",
@@ -81,10 +81,10 @@ const EditGoal=({ goal, setGoals, globalHashTags, setEditing })=> {
     buttons: {
       display: "flex",
       justifyContent: "flex-end",
-      paddingBottom:spacing(2),
+      paddingBottom: theme.spacing(2),
     },
     btn: {
-      marginRight:spacing(2),
+      marginRight: theme.spacing(2),
     },
   }));
   const classes = useStyles();

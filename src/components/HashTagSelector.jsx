@@ -1,13 +1,12 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 import { useTheme } from "@mui/material/styles";
-import { spacing } from '@mui/system';
 import { red, pink, green, purple, blue, teal, lime, yellow, grey, deepOrange } from "@mui/material/colors";
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    margin:theme.spacing.unit,
+    // Remove the margin property
   },
 }));
 
@@ -56,7 +55,7 @@ const HashTagSelector = ({ hashTags, setHashTags, globalHashTags }) => {
           borderColor: buttonHoverColor,
         },
       },
-    }));
+    }))();
   };
 
   return (
@@ -68,11 +67,17 @@ const HashTagSelector = ({ hashTags, setHashTags, globalHashTags }) => {
 
         return (
           <ColorButton
-            className={`${classes.button} ${buttonStyles().root}`}
+            className={buttonStyles.root}
             size="small"
             key={globalHashTag._id}
             onClick={() => handleToggleHashTag(globalHashTag)}
-            variant={selected ? "outlined" : ""}
+            variant={selected ? "contained" : "outlined"}
+            sx={{ m: theme.spacing(1) }} // Apply spacing using theme.spacing
+            style={{
+              backgroundColor: selected ? colors[globalHashTag.color][500] : "", // Set background color only for selected buttons
+              color: selected ? "" : colors[globalHashTag.color][500], // Set text color only for non-selected buttons
+              borderColor: selected ? colors[globalHashTag.color][500] : colors[globalHashTag.color][500], // Set border color for both selected and non-selected buttons
+            }}
           >
             {globalHashTag.tag}
           </ColorButton>
@@ -83,3 +88,4 @@ const HashTagSelector = ({ hashTags, setHashTags, globalHashTags }) => {
 };
 
 export default HashTagSelector;
+

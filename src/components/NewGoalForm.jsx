@@ -8,24 +8,23 @@ import { makeStyles } from '@mui/styles';
 import TextField from "@mui/material/TextField";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
-import { spacing } from '@mui/system';
 import Paper from '@mui/material/Paper';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
-    paddingLeft:spacing(3),
-    paddingRight:spacing(3),
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3),
   },
   textField: {
-    marginLeft:spacing(1),
-    marginRight:spacing(1),
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
     width: "25ch",
   },
   fab: {
-    marginRight:spacing(2),
-    marginBottom:spacing(2),
+    marginRight: theme.spacing(2),
+    marginBottom: theme.spacing(2),
   },
   fabContainer: {
     display: "flex",
